@@ -1,0 +1,22 @@
+Retrieval-Augmented Generation (RAG) is a technique for giving a language model
+access to information it wasn't trained on, without retraining the model itself.
+
+Instead of fine-tuning, RAG works in two stages. First, at indexing time, you
+split your documents into chunks and convert each chunk into a vector embedding,
+storing them in a searchable index. Second, at query time, you embed the user's
+question, search the index for the most similar chunks, and paste those chunks
+into the prompt before asking the model to answer.
+
+This approach has three big advantages over fine-tuning for knowledge tasks:
+it's cheap to update (just re-index changed documents), it's easy to trace an
+answer back to a source, and it reduces hallucination because the model is
+answering from provided text rather than from memory alone.
+
+RAG systems can fail in predictable ways. Poor chunking can split an idea
+across two chunks so neither one is retrievable. A weak embedding model can
+place related concepts far apart in vector space. And retrieving the wrong
+chunks will produce a confident, well-written, completely wrong answer,
+because the generation model trusts whatever context it's given.
+
+Replace this file with your own notes, thesis chapters, or any .txt/.md/.pdf
+files once the pipeline works end to end.

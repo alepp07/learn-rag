@@ -1,0 +1,24 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Built index (regenerate with: python main.py build)
+index/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Personal/sensitive documents -- keep sample.txt as the public demo,
+# but don't publish real PDFs you drop into data/ for your own testing
+data/*.pdf
+
+# Environment variables, if you switch to a .env file later
+.env
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
