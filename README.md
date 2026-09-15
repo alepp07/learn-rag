@@ -28,21 +28,46 @@ Ask a question about any PDF, Markdown, or text file you drop into `data/`, and 
 
 ## Setup
 
+Clone the repository:
+
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/alepp07/learn-rag.git
 cd learn-rag
+```
+
+Create and activate a virtual environment, then install the dependencies.
+
+**Windows (PowerShell):**
+
+```powershell
 python -m venv venv
-venv\Scripts\activate          # Windows
-# source venv/bin/activate     # macOS/Linux
-pip install -r requirements.txt
+.\venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+**macOS/Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
 Get a free API key from [console.groq.com](https://console.groq.com) (no card required), then set it:
 
-```bash
-$env:GROQ_API_KEY="your-key-here"    # PowerShell
-# export GROQ_API_KEY="your-key-here"  # macOS/Linux
+**Windows (PowerShell):**
+
+```powershell
+$env:GROQ_API_KEY="your-key-here"
 ```
+
+**macOS/Linux:**
+
+```bash
+export GROQ_API_KEY="your-key-here"
+```
+
+Run the commands below in the same terminal so the application can read the API key.
 
 ## Run it
 
